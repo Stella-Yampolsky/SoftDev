@@ -1,17 +1,17 @@
-# Clyde 'Thluffy' Sinclair
+# Stella Yampolsky
 # SoftDev
 # Sep 2024
 
 """
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Q0:
-<your response here>
+Error page when navigating to /my_foist_template, no change on the homepage.
+The error page says that "render_template was not defined", which happened bc I removed the import
 
 Q1:
-<your response here>
-
+Yes, http://127.0.0.1:5000/my_foist_template
 Q2:
-<your response here>
+First argument gives the name of the template in the templates file, 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 """
 
@@ -22,7 +22,7 @@ Q2:
 # (log prediction before executing...)
 # It won't load the template file (it's not in the path)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
