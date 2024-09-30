@@ -22,7 +22,7 @@ First argument gives the name of the template in the templates file,
 # (log prediction before executing...)
 # It won't load the template file (it's not in the path)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-from flask import Flask, render_template
+from flask import Flask#, render_template
 app = Flask(__name__)
 
 @app.route("/")
@@ -43,5 +43,6 @@ def test_tmplt():
 
 
 if __name__ == "__main__":
-    app.debug = True
+    app.debug = False
     app.run()
+
