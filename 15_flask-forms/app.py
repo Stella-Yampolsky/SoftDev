@@ -24,7 +24,7 @@ def disp_loginpage():
 
 @app.route("/auth", methods=['GET', 'POST'])
 def response():
-    user = request.args['username']
+    user = request.cookies.get('username')
     return render_template('response.html', username = user )  #response to a form submission
 
 
