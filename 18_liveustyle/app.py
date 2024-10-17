@@ -1,37 +1,23 @@
 # Stella Yampolsky
-#:(
+#JST
 # SoftDev
-#K16: Flask sessions
+#K18
 # October 2024
-#Time spent
+#Time spent 20 minutes
 
 
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
-from flask import request           #facilitate form submission
-from flask import session
-import os
 
 
 
 app = Flask(__name__)
-app.secret_key = os.urandom(32)
-
-session[username] = request.cookies.get('username')
-
-@app.route("/", methods=['GET', 'POST'])
-def disp_loginpage():
-    return render_template( 'login.html' )
 
 
-@app.route("/auth", methods=['GET', 'POST'])
-def response():
-    if(request.cookies.get('username') is None):
-        user = request.args('username')
-    else:
-        user = request.cookies.get('username')
-    return render_template('response.html', username = user )  #response to a form submission
+@app.route("/")
+def run():
+    return render_template('index.html')
 
 
     
