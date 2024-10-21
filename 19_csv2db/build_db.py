@@ -19,11 +19,12 @@ with open("students.csv", newline='') as file:
     r = csv.DictReader(file)    
     for row in r:
         c.execute(f"insert into students values('{row['name']}', '{row['age']}', '{row['id']}')")
-file.close
+file.close()
 with open("courses.csv", newline='') as file:
     r = csv.DictReader(file)    
     for row in r:
-        c.execute(f"insert into students values('{row['code']}', '{row['mark']}', '{row['id']}')")
+        c.execute(f"insert into courses values('{row['code']}', '{row['mark']}', '{row['id']}')")
+file.close()
 
 
 
