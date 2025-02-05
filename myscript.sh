@@ -1,9 +1,10 @@
 #!/bin/bash
-mv myscript.sh SoftDev
-read filename
-touch $filename
-git add myscript.sh
-git add $filename
-read commit
-git commit -am $commit
+read -p "Enter filename: " filename
+touch "$filename"
+read -p "Enter text: " txt
+echo "$txt" > "$filename"
+git add "$filename"
+read -p "Enter commit message: " commit
+git commit -m "$commit"
 git push
+
